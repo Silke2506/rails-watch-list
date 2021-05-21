@@ -2,8 +2,8 @@
 
 <%= link_to 'Back', root_path %>
 
-<%= simple_form_for @bookmark do |f| %>
-  <%= f.input :movie_id %>
+<%= simple_form_for [@list, @bookmark] do |f| %>
+  <%= f.association :movie %>
   <%= f.input :comment %>
   <%= f.submit "Submit", class: "btn btn-primary" %>
 <% end %>
